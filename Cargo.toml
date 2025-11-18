@@ -1,0 +1,16 @@
+[package]
+authors = ["liukun"]
+edition = "2018"
+name = "app"
+version = "0.1.0"
+
+[[bin]]
+bench = false
+name = "app"
+test = false
+
+[dependencies]
+cortex-m = "0.7.0"
+cortex-m-rt = "0.7.0"
+cortex-m-semihosting = "0.5.0"
+panic-halt = "0.2.0"

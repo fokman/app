@@ -1,0 +1,9 @@
+[build]
+target = "thumbv7m-none-eabi"
+
+[target.thumbv7m-none-eabi]
+runner = "qemu-system-arm -cpu cortex-m3 -machine lm3s6965evb -nographic -semihosting-config enable=on,target=native -kernel"
+# 注意：runner命令会自动将编译后的二进制文件路径附加到命令末尾
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+]
